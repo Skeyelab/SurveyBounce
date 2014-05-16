@@ -1,0 +1,6 @@
+{ 
+    "require": {
+       "pda/pheanstalk": "dev-master"
+    }
+}
+
