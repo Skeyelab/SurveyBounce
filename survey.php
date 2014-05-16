@@ -37,7 +37,7 @@ switch ($_GET["domain"]){
     header( 'Location: https://www.research.net/s/UK_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&UK' ) ;
     break;
   case "grouponfrance.zendesk.com":
-    header( 'Location: https://fr.research.net/s/CHF_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&UK' ) ;
+    header( 'Location: https://fr.research.net/s/CHF_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&FR' ) ;
     break;
 }
 
