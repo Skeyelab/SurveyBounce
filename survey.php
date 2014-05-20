@@ -12,7 +12,7 @@ if (isset($_GET["t"]) && isset($_GET["domain"]) && isset($_GET["rating"])) {
 
     $key = 'SuperSecretKey';
 
-    $iv_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_CBC);
+    $iv_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_CFC);
     $iv = mcrypt_create_iv($iv_size, MCRYPT_RAND);
 
     $encrypted = mcrypt_encrypt(MCRYPT_RIJNDAEL_256, $key, $job, MCRYPT_MODE_CFB, $iv);
@@ -36,8 +36,7 @@ case "darberry.zendesk.com":
 
     switch ($_GET["country"]) {
     case "RU":
-//        header( 'Location: RU-URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
-echo $_GET["domain"]." ".$_GET["country"];
+        header( 'Location: RU-URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
         break;
     case "UA":
         header( 'Location: UA-URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
