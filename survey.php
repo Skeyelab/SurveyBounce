@@ -18,12 +18,16 @@ if (isset($_GET["t"]) && isset($_GET["domain"]) && isset($_GET["rating"])) {
 }
 
 switch ($_GET["domain"]){
+
+//US
   case "groupon.zendesk.com":
     header( 'Location: http://www.surveymonkey.com/s/groupon-us-cs?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
     break;
   case "support.groupon.com":
     header( 'Location: http://www.surveymonkey.com/s/groupon-us-cs?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
     break;
+
+//Existing International
   case "grouponza.zendesk.com":
     header( 'Location: https://www.research.net/s/ZA_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&ZA' ) ;
     break;
@@ -39,5 +43,96 @@ switch ($_GET["domain"]){
   case "grouponfrance.zendesk.com":
     header( 'Location: https://fr.research.net/s/CHF_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&FR' ) ;
     break;
+
+
+//New International
+  case "darberry.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponae.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponaustralia.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponbel.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponbrasil.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponfrance.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "groupongermany.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "groupongreece.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponhk.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponid.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponindia.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponireland.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponitaly.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponjp.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponlatam.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponmy.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponner.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponnewzealand.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponnl.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponphilippines.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponpoland.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponportugal.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponromania.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponsingapore.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponspain.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponthailand.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponturkey.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponuk.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+  case "grouponza.zendesk.com":
+    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+
 }
 
