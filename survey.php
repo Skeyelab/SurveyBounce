@@ -47,7 +47,14 @@ switch ($_GET["domain"]){
 
 //New International
   case "darberry.zendesk.com":
-    header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+  
+    switch ($_GET["country"]){
+      case "RU":
+        header( 'Location: RU-URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+        break;
+      case "UA":
+        header( 'Location: UA-URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+        break;
     break;
   case "grouponae.zendesk.com":
     header( 'Location: URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
