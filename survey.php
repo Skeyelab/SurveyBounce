@@ -37,7 +37,7 @@ case "darberry.zendesk.com":
     switch ($_GET["country"]) {
     case "RU":
 //        header( 'Location: RU-URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
-echo "OK";
+echo $_GET["domain"]." ".$_GET["country"];
         break;
     case "UA":
         header( 'Location: UA-URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
