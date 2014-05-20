@@ -36,12 +36,25 @@ case "darberry.zendesk.com":
 
     switch ($_GET["country"]) {
     case "RU":
-        header( 'Location: RU-URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+        header( 'Location: https://ru.research.net/s/RU_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
         break;
     case "UA":
-        header( 'Location: UA-URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+        header( 'Location: https://ru.research.net/s/UKR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
         break;
     }
+    break
+
+case "grouponae.zendesk.com":
+
+    switch ($_GET["language"]) {
+    case "EN":
+        header( 'Location: https://www.research.net/s/AE_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+        break;
+    case "AR":
+        header( 'Location: https://www.research.net/s/AEAR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+        break;
+    }
+    break
 
 
 }
