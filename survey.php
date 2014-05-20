@@ -42,7 +42,7 @@ case "darberry.zendesk.com":
         header( 'Location: https://ru.research.net/s/UKR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
         break;
     }
-    break
+    break;
 
 case "grouponae.zendesk.com":
 
@@ -54,7 +54,7 @@ case "grouponae.zendesk.com":
         header( 'Location: https://www.research.net/s/AEAR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
         break;
     }
-    break
+    break;
 
 
 }
