@@ -50,7 +50,8 @@ switch ($_GET["domain"]){
   
     switch ($_GET["country"]){
       case "RU":
-        header( 'Location: RU-URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+      echo "RU";
+       # header( 'Location: RU-URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
         break;
       case "UA":
         header( 'Location: UA-URLHERE?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
