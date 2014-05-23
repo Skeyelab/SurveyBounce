@@ -73,6 +73,9 @@ case "grouponbel.zendesk.com":
     }
 break;
 
+case "grouponbrasil.zendesk.com":
+    header( 'Location: https://pt.research.net/s/BR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+break;
 
 
 }
