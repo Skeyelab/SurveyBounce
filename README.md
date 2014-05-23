@@ -2,7 +2,8 @@ SurveyBounce
 ============
 
 
-This acts as a central endpoint to put into outbound emails from Zendesk to customers for CSAT.  It will create a job for to update the ticket, then send the customer to the appropriate SurveyMonkey URL.
+This acts as a central endpoint to put into outbound emails from Zendesk to customers for CSAT.  
+It will create a job for to update the ticket, then send the customer to the appropriate SurveyMonkey URL.
 
 
 Currently supported:
