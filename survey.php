@@ -138,5 +138,29 @@ switch ($_GET["domain"]) {
     header( 'Location: https://jp.research.net/s/JP_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"]) ;
     break;
 
+    case "grouponlatam.zendesk.com":
+
+    switch ($_GET["country"]) {
+        case "AR":
+        header( 'Location: https://es.research.net/s/AR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+        break;
+        case "CL":
+        header( 'Location: https://es.research.net/s/CL_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+        break;
+        case "CO":
+        header( 'Location: https://es.research.net/s/CO_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+        break;
+        case "MX":
+        header( 'Location: https://es.research.net/s/MX_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+        break;
+        case "PE":
+        header( 'Location: https://es.research.net/s/PE_CSticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+        break;
+        case "PR":
+        header( 'Location: https://es.research.net/s/PR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+        break;
+    }
+    break;
+
 
 }
