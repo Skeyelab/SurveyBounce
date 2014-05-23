@@ -33,7 +33,7 @@ switch ($_GET["domain"]) {
 
 
     //New International
-    $suffix = $_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"];
+    $suffix = ;
 
     case "darberry.zendesk.com":
 
@@ -84,18 +84,18 @@ switch ($_GET["domain"]) {
 
     switch ($_GET["country"]) {
         case "FR":
-        header( 'Location: https://fr.research.net/s/FR_CS?ticketid='.$suffix ) ;
+        header( 'Location: https://fr.research.net/s/FR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
         break;
         case "CH":
-        header( 'Location: https://fr.research.net/s/CHF_CS?ticketid='.$suffix ) ;
+        header( 'Location: https://fr.research.net/s/CHF_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
         break;
         case "CA":
         switch($_GET["language"]) {
             case "FR":
-            header( 'Location: https://fr.research.net/s/CA_CS?ticketid='.$suffix ) ;
+            header( 'Location: https://fr.research.net/s/CA_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
             break;
             case "EN":
-            header( 'Location: https://www.research.net/s/CAEN_CS?ticketid='.$suffix ) ;
+            header( 'Location: https://www.research.net/s/CAEN_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
             break;
         }
         break;
