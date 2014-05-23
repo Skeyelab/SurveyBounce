@@ -61,5 +61,18 @@ case "grouponaustralia.zendesk.com":
     header( 'Location: https://www.research.net/s/AU_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
     break;
 
+case "grouponbel.zendesk.com":
+
+    switch ($_GET["language"]) {
+    case "FR":
+        header( 'Location: https://fr.research.net/s/BEFR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+        break;
+    case "NL":
+        header( 'Location: https://www.research.net/s/BENL_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+        break;
+    }
+    break;
+
+
 
 }
