@@ -162,5 +162,9 @@ switch ($_GET["domain"]) {
     }
     break;
 
+    case "grouponmy.zendesk.com":
+    header( 'Location: https://www.research.net/s/MY_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"]) ;
+    break;
+
 
 }
