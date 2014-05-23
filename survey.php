@@ -8,36 +8,97 @@ require 'vendor/autoload.php';
 $pheanstalk = new Pheanstalk_Pheanstalk('127.0.0.1');
 
 if (isset($_GET["t"]) && isset($_GET["domain"]) && isset($_GET["rating"])) {
-	$job = '{"id":'.$_GET["t"].',"account":"'.$_GET["domain"].'","rating":"'.$_GET["rating"].'"}';
+    $job = '{"id":'.$_GET["t"].',"account":"'.$_GET["domain"].'","rating":"'.$_GET["rating"].'"}';
 
-	$key = 'SuperSecretKey';
+    $key = 'SuperSecretKey';
 
-	$encrypted = mcrypt_encrypt(MCRYPT_RIJNDAEL_256, $key, $job, MCRYPT_MODE_CFB);
-	$pheanstalk->putInTube('survey',$encrypted,500) ;
+    $iv_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_CFC);
+    $iv = mcrypt_create_iv($iv_size, MCRYPT_RAND);
+
+    $encrypted = mcrypt_encrypt(MCRYPT_RIJNDAEL_256, $key, $job, MCRYPT_MODE_CFB, $iv);
+    $pheanstalk->putInTube('survey',$encrypted,500) ;
 
 }
 
-switch ($_GET["domain"]){
-  case "groupon.zendesk.com":
-    header( 'Location: http://www.surveymonkey.com/s/groupon-us-cs?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
-    break;
-  case "support.groupon.com":
-    header( 'Location: http://www.surveymonkey.com/s/groupon-us-cs?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
-    break;
-  case "grouponza.zendesk.com":
-    header( 'Location: https://www.research.net/s/ZA_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&ZA' ) ;
-    break;
-  case "grouponireland.zendesk.com":
-    header( 'Location: https://www.research.net/s/IE_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&IE' ) ;
-    break;
-  case "grouponaustralia.zendesk.com":
-    header( 'Location: https://www.research.net/s/AU_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&AU' ) ;
-    break;
-  case "grouponuk.zendesk.com":
-    header( 'Location: https://www.research.net/s/UK_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&UK' ) ;
-    break;
-  case "grouponfrance.zendesk.com":
-    header( 'Location: https://fr.research.net/s/CHF_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&FR' ) ;
-    break;
-}
+switch ($_GET["domain"]) {
 
+    //US
+case "groupon.zendesk.com":
+    header( 'Location: http://www.surveymonkey.com/s/groupon-us-cs?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+break;
+case "support.groupon.com":
+    header( 'Location: http://www.surveymonkey.com/s/groupon-us-cs?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+break;
+
+
+    //New International
+case "darberry.zendesk.com":
+
+    switch ($_GET["country"]) {
+    case "RU":
+        header( 'Location: https://ru.research.net/s/RU_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+    case "UA":
+        header( 'Location: https://ru.research.net/s/UKR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+    }
+break;
+
+case "grouponae.zendesk.com":
+
+    switch ($_GET["language"]) {
+    case "EN":
+        header( 'Location: https://www.research.net/s/AE_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+    case "AR":
+        header( 'Location: https://www.research.net/s/AEAR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+    }
+break;
+
+case "grouponaustralia.zendesk.com":
+
+    header( 'Location: https://www.research.net/s/AU_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+break;
+
+case "grouponbel.zendesk.com":
+
+    switch ($_GET["language"]) {
+    case "FR":
+        header( 'Location: https://fr.research.net/s/BEFR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+    case "NL":
+        header( 'Location: https://www.research.net/s/BENL_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+    }
+break;
+
+case "grouponbrasil.zendesk.com":
+    header( 'Location: https://pt.research.net/s/BR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+break;
+
+case "grouponfrance.zendesk.com":
+
+    switch ($_GET["country"]) {
+    case "FR":
+        header( 'Location: https://fr.research.net/s/FR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+    case "CH":
+        header( 'Location: https://fr.research.net/s/CHF_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+    case "CA":
+        switch($_GET["language"]) {
+            case "FR":
+                header( 'Location: https://fr.research.net/s/CA_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+            break;
+            case "EN":
+                header( 'Location: https://www.research.net/s/CAEN_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+            break;
+        }
+    break;
+    }
+break;
+
+
+
+}
