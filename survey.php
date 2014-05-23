@@ -25,10 +25,10 @@ switch ($_GET["domain"]) {
     //US
 case "groupon.zendesk.com":
     header( 'Location: http://www.surveymonkey.com/s/groupon-us-cs?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
-    break;
+break;
 case "support.groupon.com":
     header( 'Location: http://www.surveymonkey.com/s/groupon-us-cs?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
-    break;
+break;
 
 
     //New International
@@ -37,41 +37,41 @@ case "darberry.zendesk.com":
     switch ($_GET["country"]) {
     case "RU":
         header( 'Location: https://ru.research.net/s/RU_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
-        break;
+    break;
     case "UA":
         header( 'Location: https://ru.research.net/s/UKR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
-        break;
-    }
     break;
+    }
+break;
 
 case "grouponae.zendesk.com":
 
     switch ($_GET["language"]) {
     case "EN":
         header( 'Location: https://www.research.net/s/AE_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
-        break;
+    break;
     case "AR":
         header( 'Location: https://www.research.net/s/AEAR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
-        break;
-    }
     break;
+    }
+break;
 
 case "grouponaustralia.zendesk.com":
 
     header( 'Location: https://www.research.net/s/AU_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
-    break;
+break;
 
 case "grouponbel.zendesk.com":
 
     switch ($_GET["language"]) {
     case "FR":
         header( 'Location: https://fr.research.net/s/BEFR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
-        break;
+    break;
     case "NL":
         header( 'Location: https://www.research.net/s/BENL_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
-        break;
-    }
     break;
+    }
+break;
 
 
 
