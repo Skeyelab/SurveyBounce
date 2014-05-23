@@ -99,6 +99,24 @@ case "grouponfrance.zendesk.com":
     }
 break;
 
+case "groupongermany.zendesk.com":
+
+    switch ($_GET["country"]) {
+    case "AT":
+        header( 'Location: https://de.research.net/s/AT_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+    case "DE":
+        header( 'Location: https://de.research.net/s/DE_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+    case "CH":
+        header( 'Location: https://de.research.net/s/CH_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+    }
+break;
+
+case "groupongreece.zendesk.com":
+    header( 'Location: https://www.research.net/s/GR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+break;
 
 
 }
