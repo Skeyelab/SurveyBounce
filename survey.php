@@ -118,6 +118,25 @@ switch ($_GET["domain"]) {
     header( 'Location: https://www.research.net/s/GR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"]) ;
     break;
 
+    case "grouponhk.zendesk.com":
+    header( 'Location: https://www.research.net/s/HK_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"]) ;
+    break;
+
+    case "grouponindia.zendesk.com":
+    header( 'Location: https://www.research.net/s/IN_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"]) ;
+    break;
+
+    case "grouponireland.zendesk.com":
+    header( 'Location: https://www.research.net/s/IE_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"]) ;
+    break;
+
+    case "grouponitaly.zendesk.com":
+    header( 'Location: https://www.research.net/s/IT_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"]) ;
+    break;
+
+    case "grouponjp.zendesk.com":
+    header( 'Location: https://jp.research.net/s/JP_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"]) ;
+    break;
 
 
 }
