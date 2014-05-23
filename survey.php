@@ -77,5 +77,28 @@ case "grouponbrasil.zendesk.com":
     header( 'Location: https://pt.research.net/s/BR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
 break;
 
+case "grouponfrance.zendesk.com":
+
+    switch ($_GET["country"]) {
+    case "FR":
+        header( 'Location: https://fr.research.net/s/FR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+    case "CH":
+        header( 'Location: https://fr.research.net/s/CHF_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+    case "CA":
+        switch($_GET["language"]) {
+            case "FR":
+                header( 'Location: https://fr.research.net/s/CA_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+            break;
+            case "EN":
+                header( 'Location: https://www.research.net/s/CAEN_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+            break;
+        }
+    break;
+    }
+break;
+
+
 
 }
