@@ -56,5 +56,10 @@ case "grouponae.zendesk.com":
     }
     break;
 
+case "grouponaustralia.zendesk.com":
+
+    header( 'Location: https://www.research.net/s/AU_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"] ) ;
+    break;
+
 
 }
