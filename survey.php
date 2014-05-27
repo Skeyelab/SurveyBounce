@@ -12,10 +12,10 @@ if (isset($_GET["t"]) && isset($_GET["domain"]) && isset($_GET["rating"])) {
 
     $key = 'SuperSecretKey';
 
-    $iv_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_CFC);
-    $iv = mcrypt_create_iv($iv_size, MCRYPT_RAND);
+ //   $iv_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_CFC);
+ //   $iv = mcrypt_create_iv($iv_size, MCRYPT_RAND);
 
-    $encrypted = mcrypt_encrypt(MCRYPT_RIJNDAEL_256, $key, $job, MCRYPT_MODE_CFB, $iv);
+    $encrypted = mcrypt_encrypt(MCRYPT_RIJNDAEL_256, $key, $job, MCRYPT_MODE_CFB);
     $pheanstalk->putInTube('survey',$encrypted,500) ;
 
 }
@@ -166,6 +166,29 @@ switch ($_GET["domain"]) {
     case "grouponmy.zendesk.com":
     header( 'Location: https://www.research.net/s/MY_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
     break;
+
+
+    case "grouponner.zendesk.com":
+
+    switch ($_GET["country"]) {
+        case "DK":
+        header( 'Location: https://www.research.net/s/DK_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+        break;
+        case "FI":
+        header( 'Location: https://www.research.net/s/FI_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+        break;
+        case "IL":
+        header( 'Location: https://www.research.net/s/IL_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+        break;
+        case "NO":
+        header( 'Location: https://no.research.net/s/NO_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+        break;
+        case "SE":
+        header( 'Location: https://sv.research.net/s/SE_CSticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+        break;
+    }
+    break;
+
 
 
 }
