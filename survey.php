@@ -8,8 +8,14 @@ require 'vendor/autoload.php';
 $pheanstalk = new Pheanstalk_Pheanstalk('127.0.0.1');
 
 if (isset($_GET["t"]) && isset($_GET["domain"]) && isset($_GET["rating"])) {
-    $job = '{"id":'.$_GET["t"].',"account":"'.$_GET["domain"].'","rating":"'.$_GET["rating"].'"}';
+  if ($_GET["domain"] == "support.groupon.com"){
+    $domain = "groupon.zendesk.com";
+  }
+  else {
+    $domain = $_GET["domain"];
+  }
 
+    $job = '{"id":'.$_GET["t"].',"account":"'.$domain.'","rating":"'.$_GET["rating"].'"}';
     $key = 'SuperSecretKey';
 
  //   $iv_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_CFC);
