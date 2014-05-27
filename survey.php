@@ -189,6 +189,14 @@ switch ($_GET["domain"]) {
     }
     break;
 
+    case "grouponnewzealand.zendesk.com":
+    header( 'Location: https://www.research.net/s/NZ_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+    break;
+
+    case "grouponnl.zendesk.com":
+    header( 'Location: https://www.research.net/s/NL_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+    break;
+
 
 
 }
