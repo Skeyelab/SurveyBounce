@@ -166,6 +166,12 @@ switch ($_GET["domain"]) {
         case "PR":
         header( 'Location: https://es.research.net/s/PR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
         break;
+        case "UY":
+        header( 'Location: https://es.research.net/s/UY_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+        break;
+        case "PA":
+        header( 'Location: https://es.research.net/s/PA_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+        break;
     }
     break;
 
