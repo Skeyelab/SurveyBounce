@@ -161,7 +161,7 @@ switch ($_GET["domain"]) {
         header( 'Location: https://es.research.net/s/MX_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
         break;
         case "PE":
-        header( 'Location: https://es.research.net/s/PE_CSticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+        header( 'Location: https://es.research.net/s/PE_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
         break;
         case "PR":
         header( 'Location: https://es.research.net/s/PR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
@@ -203,6 +203,10 @@ switch ($_GET["domain"]) {
 
     case "grouponnewzealand.zendesk.com":
     header( 'Location: https://www.research.net/s/NZ_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+    break;
+
+    case "grouponid.zendesk.com":
+    header( 'Location: https://www.research.net/s/IND_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
     break;
 
     case "grouponnl.zendesk.com":
