@@ -230,6 +230,9 @@ case "grouponner.zendesk.com":
         }
         break;
     }
+    case "NL":
+        header( 'Location: https://www.research.net/s/NL_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+        break;
     break;
 
     case "grouponnewzealand.zendesk.com":
