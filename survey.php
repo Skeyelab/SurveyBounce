@@ -126,7 +126,15 @@ case "groupongreece.zendesk.com":
     break;
 
 case "grouponhk.zendesk.com":
-    header( 'Location: https://www.research.net/s/HK_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+
+    switch ($_GET["language"]) {
+    case "HK":
+        header( 'Location: https://www.research.net/s/HK_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+        break;
+    case "EN":
+        header( 'Location: https://www.research.net/s/HK_ENG_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+        break;
+    }
     break;
 
 case "grouponindia.zendesk.com":
