@@ -227,6 +227,16 @@ case "grouponner.zendesk.com":
     case "CH":
         header( 'Location: https://de.research.net/s/CH_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
         break;
+    case "BE":
+        switch ($_GET["language"]) {
+        case "FR":
+            header( 'Location: https://fr.research.net/s/BEFR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+            break;
+        case "NL":
+            header( 'Location: https://www.research.net/s/BENL_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+            break;
+        }
+        break;
     case "AE":
         switch ($_GET["language"]) {
         case "EN":
