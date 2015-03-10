@@ -1,5 +1,4 @@
 <?php
-
 //needs the following parameters in the URL
 //survey.php?ticket=3&domain=support.groupon.com&rating=+
 
