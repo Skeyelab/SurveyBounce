@@ -190,6 +190,12 @@ case "grouponmy.zendesk.com":
 case "grouponner.zendesk.com":
 
     switch ($_GET["country"]) {
+    case "RU":
+        header( 'Location: https://ru.research.net/s/RU_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+        break;
+    case "UA":
+        header( 'Location: https://ru.research.net/s/UKR_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
+        break;
     case "PT":
         header( 'Location: https://pt.research.net/s/PT_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
         break;
@@ -342,4 +348,3 @@ case "grouponza.zendesk.com":
 
 
 }
- 
