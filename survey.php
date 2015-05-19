@@ -127,7 +127,7 @@ case "groupongreece.zendesk.com":
 case "grouponhk.zendesk.com":
 
     switch ($_GET["language"]) {
-    case "HK":
+    case "ZH":
         header( 'Location: https://www.research.net/s/HK_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
         break;
     case "EN":
