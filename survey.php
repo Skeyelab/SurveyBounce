@@ -252,7 +252,7 @@ case "grouponner.zendesk.com":
         header( 'Location: https://www.research.net/s/ZA_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
         break;
     case "UK":
-        header( 'Location: https://www.research.net/r/CS_SAT?TID='.$_GET["t"].'&AID='.$_GET["a"].'&'.$_GET["country"] ) ;
+        header( 'Location: https://www.research.net/s/CS_SAT?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
         break;
     case "RO":
         header( 'Location: https://www.research.net/s/RO_CS?ticketid='.$_GET["t"].'&assigneeid='.$_GET["a"].'&'.$_GET["country"] ) ;
